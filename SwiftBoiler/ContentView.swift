@@ -18,8 +18,13 @@ struct ContentView: View {
             Spacer()
             Text("appDir: \(appDir())")
             Spacer()
+            Text("appDirAlt: \(appDirAlt())")
+            Spacer()
         }
         .padding()
+        .onAppear() {
+            print(appDirAlt())
+        }
     }
 }
 

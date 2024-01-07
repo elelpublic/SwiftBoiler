@@ -12,3 +12,10 @@ import Foundation
 func appDir() -> String {
     return URL.applicationSupportDirectory.path(percentEncoded: false)
 }
+
+/// Rerturns working directory(?) of app (alternative version)
+///
+func appDirAlt() -> String {
+    return NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory
+        .applicationSupportDirectory,.userDomainMask,true)[0]
+}
